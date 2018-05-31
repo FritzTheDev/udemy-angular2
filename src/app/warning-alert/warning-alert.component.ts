@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./warning-alert.component.css']
 })
 export class WarningAlertComponent implements OnInit {
-
-  constructor() { }
+  disableButton = false;
+  constructor() { 
+    setTimeout(() => {
+      this.disableButton = true;
+    }, 2000)
+  }
 
   ngOnInit() {
   }
